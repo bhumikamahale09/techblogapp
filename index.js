@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 const mongodbURL=process.env.MONGO_URL
-mongoose.connect(MONGO_URL)
+mongoose.connect(mongodbURL)
 .then(()=>{
     console.log("DB connected successfully");
 })
